@@ -1,8 +1,7 @@
-ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:3.19
-FROM ${BUILD_FROM}
+FROM ghcr.io/home-assistant/amd64-base:3.19
 
-# Install node and other dependencies
-RUN apk add --no-cache nodejs~=20 npm python3 make g++
+# Install dependencies (Node 20 is default in Alpine 3.19)
+RUN apk add --no-cache nodejs npm python3 make g++
 
 WORKDIR /app
 
