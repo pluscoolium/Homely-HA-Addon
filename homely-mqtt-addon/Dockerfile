@@ -1,6 +1,6 @@
 FROM ghcr.io/home-assistant/amd64-base:3.19
 
-# Install dependencies (Node 20 is default in Alpine 3.19)
+# Install node (Alpine 3.19 har Node v20 som standard)
 RUN apk add --no-cache nodejs npm python3 make g++
 
 WORKDIR /app
